@@ -10,15 +10,16 @@ import org.junit.jupiter.api.Test;
 /**
  * Tests de l'exercice 3 : ConvertisseurDeNombreRomain.
  *
- * <p>Progression TDD :
+ * <p>
+ * Progression TDD :
  *
  * <ol>
- *   <li>Chiffres de base : I, II, III - fake it puis triangulation sur la somme
- *   <li>Arrivée de V, puis VI - triangulation sur l'addition à un autre symbole
- *   <li>IV (4) et IX (9) - introduction de la soustraction
- *   <li>X, L, C, D, M - extension à tous les symboles (extract method à ce stade)
- *   <li>Grand nombre MMMMDCCCLXXXVIII (4888) - stress test
- *   <li>Exceptions : symboles inconnus et soustractions invalides
+ * <li>Chiffres de base : I, II, III - fake it puis triangulation sur la somme
+ * <li>Arrivée de V, puis VI - triangulation sur l'addition à un autre symbole
+ * <li>IV (4) et IX (9) - introduction de la soustraction
+ * <li>X, L, C, D, M - extension à tous les symboles (extract method à ce stade)
+ * <li>Grand nombre MMMMDCCCLXXXVIII (4888) - stress test
+ * <li>Exceptions : symboles inconnus et soustractions invalides
  * </ol>
  */
 class ConvertisseurDeNombreRomainTest {
@@ -32,7 +33,6 @@ class ConvertisseurDeNombreRomainTest {
 
   // ========= Chiffres de base =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_I_en_1() {
     assertThat(convertisseur.enNombreArabe("I")).isEqualTo(1);
