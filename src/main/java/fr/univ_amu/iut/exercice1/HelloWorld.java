@@ -30,9 +30,5 @@ public class HelloWorld {
     } else {
       return "Hello, World!";
     }
-    // "Hello, World!" par défaut, ce qui suffit pour les deux premiers tests).
-
-    // Activez les tests un par un. Fake it d'abord, triangulez quand un
-    // deuxième test vous y force.
   }
 }

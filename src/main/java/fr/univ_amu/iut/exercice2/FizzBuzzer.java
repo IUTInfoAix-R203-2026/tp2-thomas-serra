@@ -24,10 +24,18 @@ public class FizzBuzzer {
    * @return la chaîne FizzBuzz correspondante
    */
   public String fizzBuzz(int n) {
-    // TODO exercice 2 : ajouter les cas Fizz, Buzz et FizzBuzz avant le
-    // return par défaut. Activez les tests dans l'ordre : 1 et 2 passent
-    // directement (fake it via le return final), 3 demande d'introduire
-    // un premier cas, etc.
+
+    if (n % 5 == 0 & n % 3 == 0) {
+      return "FizzBuzz";
+    }
+
+    if (n % 3 == 0) {
+      return "Fizz";
+    }
+
+    if (n % 5 == 0) {
+      return "Buzz";
+    }
     return String.valueOf(n);
   }
 
@@ -37,10 +45,8 @@ public class FizzBuzzer {
    * @param n taille de la séquence demandée (positif)
    * @return tableau de {@code n} chaînes FizzBuzz dans l'ordre croissant
    */
-  public String[] fizzBuzzJusquA(int n) {
-    String[] sequence = new String[n];
-    // TODO exercice 2 : remplir sequence[i] en réutilisant fizzBuzz(i+1).
-    // Ne dupliquez pas la logique : appelez fizzBuzz !
-    return sequence;
-  }
+  /**
+   * public String[] fizzBuzzJusquA(int n) { String[] sequence[i] = new String[n]; for (int n return
+   * sequence[i]; }
+   */
 }
