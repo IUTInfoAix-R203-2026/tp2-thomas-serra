@@ -25,9 +25,14 @@ public class HelloWorld {
    */
   public static String saluer(String nom) {
     // TODO exercice 1 : gérer le cas où nom est renseigné (sinon on retourne
+    if (nom != "" & nom != null) {
+      return "Hello, " + nom + "!";
+    } else {
+      return "Hello, World!";
+    }
     // "Hello, World!" par défaut, ce qui suffit pour les deux premiers tests).
+
     // Activez les tests un par un. Fake it d'abord, triangulez quand un
     // deuxième test vous y force.
-    return "Hello, World!";
   }
 }
