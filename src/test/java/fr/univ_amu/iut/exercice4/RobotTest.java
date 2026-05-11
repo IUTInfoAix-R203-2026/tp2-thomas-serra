@@ -9,28 +9,27 @@ import org.junit.jupiter.api.Test;
 /**
  * Tests de l'exercice 4 : Robot + SimulateurDeRobot.
  *
- * <p>Progression TDD :
+ * <p>
+ * Progression TDD :
  *
  * <ol>
- *   <li>Création du robot avec sa position et son orientation initiales
- *   <li>Rotations : chaque cycle de 4 rotations ramène à l'orientation de départ
- *   <li>Avancée : chaque orientation impacte un axe différent
- *   <li>Simulation d'une séquence complète avec {@link SimulateurDeRobot}
- *   <li>Robustesse : commande inconnue → exception
+ * <li>Création du robot avec sa position et son orientation initiales
+ * <li>Rotations : chaque cycle de 4 rotations ramène à l'orientation de départ
+ * <li>Avancée : chaque orientation impacte un axe différent
+ * <li>Simulation d'une séquence complète avec {@link SimulateurDeRobot}
+ * <li>Robustesse : commande inconnue → exception
  * </ol>
  */
 class RobotTest {
 
   // ========= Création =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_robot_memorise_position() {
     Robot robot = new Robot(new Position(0, 0), Orientation.NORD);
     assertThat(robot.getPosition()).isEqualTo(new Position(0, 0));
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_robot_memorise_orientation() {
     Robot robot = new Robot(new Position(0, 0), Orientation.EST);
@@ -38,8 +37,6 @@ class RobotTest {
   }
 
   // ========= tournerADroite =========
-
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_robot_tourne_a_droite_depuis_nord_donne_est() {
     Robot robot = new Robot(new Position(0, 0), Orientation.NORD);

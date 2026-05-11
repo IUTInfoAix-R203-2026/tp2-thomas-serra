@@ -38,55 +38,45 @@ class ConvertisseurDeNombreRomainTest {
     assertThat(convertisseur.enNombreArabe("I")).isEqualTo(1);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_II_en_2() {
     assertThat(convertisseur.enNombreArabe("II")).isEqualTo(2);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_III_en_3() {
     assertThat(convertisseur.enNombreArabe("III")).isEqualTo(3);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_V_en_5() {
     assertThat(convertisseur.enNombreArabe("V")).isEqualTo(5);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_VI_en_6() {
     assertThat(convertisseur.enNombreArabe("VI")).isEqualTo(6);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_X_en_10() {
     assertThat(convertisseur.enNombreArabe("X")).isEqualTo(10);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_L_en_50() {
     assertThat(convertisseur.enNombreArabe("L")).isEqualTo(50);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
-  @Test
   void le_convertisseur_traduit_C_en_100() {
     assertThat(convertisseur.enNombreArabe("C")).isEqualTo(100);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_D_en_500() {
     assertThat(convertisseur.enNombreArabe("D")).isEqualTo(500);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_convertisseur_traduit_M_en_1000() {
     assertThat(convertisseur.enNombreArabe("M")).isEqualTo(1000);

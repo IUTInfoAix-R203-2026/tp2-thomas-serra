@@ -1,4 +1,4 @@
-git checkout-b package fr.univ_amu.iut.exercice3;
+package fr.univ_amu.iut.exercice3;
 
 /**
  * Exercice 3 - Convertisseur de chiffres romains en nombres arabes.
@@ -35,63 +35,72 @@ git checkout-b package fr.univ_amu.iut.exercice3;
  */
 public class ConvertisseurDeNombreRomain {
 
-  /**
-   * Convertit une chaîne de chiffres romains en valeur entière.
-   *
-   * @param chiffreRomain chaîne composée de symboles romains (par exemple
-   *                      {@code "XLIX"})
-   * @return la valeur entière correspondante
-   * @throws IllegalArgumentException si la chaîne contient un symbole invalide ou
-   *                                  une soustraction
-   *                                  interdite
-   */
-  public int enNombreArabe(String chiffreRomain) {
-    int total = 0;
-    char[] j = chiffreRomain.toCharArray();
-    int i = 0;
-    while (i != chiffreRomain.length()) {
-      if (chiffreRomain == "I") {
-        total = total + 1;
-      }
-      if (chiffreRomain == "II") {
-        total = total + 2;
-      }
-      if (chiffreRomain == "III") {
-        total = total + 3;
-      }
-      if (chiffreRomain == "IV") {
-        total = total + 4;
-      }
-      if (chiffreRomain == "V") {
-        total = total + 5;
-      }
-      if (chiffreRomain == "VI") {
-        total = total + 6;
-      }
-      if (chiffreRomain == "X") {
-        total = total + 10;
-      }
-      if (chiffreRomain == "XL") {
-        total = total + 40;
-      }
-      if (chiffreRomain == "L") {
-        total = total + 50;
-      }
-      if (chiffreRomain == "C") {
-        total = total + 100;
-      }
-      if (chiffreRomain == "D") {
-        total = total + 500;
-      }
-      if (chiffreRomain == "M") {
-        total = total + 1000;
-      }
-      // Quand vous arrivez à "IV" = 4 : extrayez une méthode valeurDe(char)
-      // pour factoriser, puis ajoutez la logique de soustraction.
-      //
-      // Pour les exceptions : une soustraction est valide seulement pour
-      // I avant V/X, X avant L/C, C avant D/M. Tout le reste est invalide.
-      return total;
+  public boolean verifieSoustraction(String chiffreRomain, int i) {
+    boolean estSoustrayable = false;
+    if (getListeSuivants(chiffreRomain.charAt(i)).contains(String.valueOf(chiffreRomain.charAt(i + 1))))
+      estSoustrayable = true;
+    return estSoustrayable;
+  }
+
+  public String getListeSuivants(char c) {
+    switch (c) {
+      case 'I':
+        return "VX";
+      case 'X':
+        return "LC";
+      case 'C':
+        return "DM";
+      default:
+        return null;
     }
   }
+
+  public int valeurDe(char charactere, string chiffreRomain, int i) {
+    if (estSoustrayable == true){
+    total = valeurDe(chiffreRomain.charAt(i)) - valeurde(chiffreRomain.charAt(i + 1))
+    return total;
+        }
+      }
+
+  }
+
+  public int enNombreArabe(String chiffreRomain) {
+    int total = 0;
+    char[] listCaractère = chiffreRomain.toCharArray();
+    for (int cpt = 0; cpt < chiffreRomain.length(); cpt = cpt + 1) {
+      // if ()
+      // if (ordreRomain.index0.currentChar < odreRomain.index0.nextchar) {
+      // ordreRomain.index0.currentChar - odreRomain.index0.nextchar
+      // }
+      switch (listCaractère[cpt]) {
+        case 'I':
+          total = total + 1;
+          break;
+        case 'V':
+          total = total + 5;
+          break;
+        case 'X':
+          total = total + 10;
+          break;
+        case 'L':
+          total = total + 50;
+          break;
+        case 'c':
+          total = total + 100;
+          break;
+        case 'D':
+          total = total + 500;
+          break;
+        case 'M':
+          total = total + 1000;
+          break;
+      }
+    }
+    return (total);
+  }
 }
+// Quand vous arrivez à "IV" = 4 : extrayez une méthode valeurDe(char)
+// pour factoriser, puis ajoutez la logique de soustraction.
+//
+// Pour les exceptions : une soustraction est valide seulement pour
+// I avant V/X, X avant L/C, C avant D/M. Tout le reste est invalide.
